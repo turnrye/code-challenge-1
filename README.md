@@ -1,5 +1,59 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Code challenge instructions
+
+This React application is a really, really simple web UI for a product listing on an ecommerce website. We have the following new requirement with some technical implementation notes. Please submit a PR to this repository with the implementation.
+
+As a customer looking for advice on products, I want to be able to see the average rating of a product so that I can better determine if the product is right for my needs.
+
+- Use a 5 star scale for the average rating
+- Have a small note indicating how many ratings are in the average
+- Don't slow down the page load for this; add it as the data comes in along the way
+
+The backend team has made an API to help with this, which is available with the following swagger API specification here:
+
+```yaml
+swagger: "2.0"
+info:
+  version: "0.0.0"
+  title: "Mock Product"
+  license:
+    name: "UNLICENSED"
+host: "mock-products.free.beeceptor.com"
+basePath: "/"
+schemes:
+- "https"
+paths:
+  /ratings/{sku}:
+    get:
+      summary: "Get the summary ratings for a given sku"
+      description: ""
+      operationId: "addPet"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "sku"
+        description: "The sku of the product to get ratings for"
+        required: true
+        type: string
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Rating"
+definitions:
+  Rating:
+    type: "object"
+    properties:
+      averageRating:
+        type: "number"
+      numberOfRatings:
+        type: "integer"
+```
+
+Note though that the only product implemented in this API is the one currently hardcoded in App.js with sku "46B24R-AGM".
+
 ## Available Scripts
 
 In the project directory, you can run:

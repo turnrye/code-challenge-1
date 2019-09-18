@@ -4,20 +4,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" data-sku="46B24R-AGM">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/jci/46B24R-AGM/image/2/" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Duralast Platinum Battery 46B24R-AGM Group Size 46B24R 410 CCA
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button>
+          Add to Cart
+        </button>
       </header>
     </div>
   );
