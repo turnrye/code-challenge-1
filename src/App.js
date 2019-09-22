@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Rating from "./components/Rating/Rating";
 
 function App() {
+
   return (
     <div className="App" data-sku="46B24R-AGM">
       <header className="App-header">
@@ -10,6 +12,8 @@ function App() {
         <p>
           Duralast Platinum Battery 46B24R-AGM Group Size 46B24R 410 CCA
         </p>
+        {/* Rating of Material UI */}
+        <Rating />
         <button>
           Add to Cart
         </button>
